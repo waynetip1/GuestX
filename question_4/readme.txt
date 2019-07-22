@@ -13,6 +13,5 @@ Screen Output:
 Results: Lines: 4, words: 6 
 
 -----------------------------------------------------------------------------------
-known issues:
-The active lines of text have commas between each word.
+
 

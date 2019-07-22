@@ -1,0 +1,46 @@
+.form-control {
+  resize: none;
+  white-space: pre-wrap;
+}
+.inactive {
+  color: grey;
+  margin-bottom: 5px;
+}
+.active,
+.inactive-word {
+  color: black;
+}
+.active-word {
+  color: red;
+}
+.target-word {
+  font-weight: bold;
+  color: black;
+}
+
+.form-group {
+  margin: 2rem;
+}
+#analyze,
+#reset {
+  margin-left: 2rem;
+}
+.title {
+  text-align: center;
+  text-transform: uppercase;
+}
+.subtitle {
+  text-transform: capitalize;
+  text-align: center;
+}
+#output {
+  margin: 2rem;
+}
+#results {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.vowels {
+  color: red;
+}

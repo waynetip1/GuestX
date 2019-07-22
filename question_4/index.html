@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title">
+      W<span class="vowels">o</span>rd V<span class="vowels">o</span>w<span
+        class="vowels"
+        >e</span
+      >l C<span class="vowels">ou</span>nt<span class="vowels">e</span>r
+    </h1>
+    <h4 class="subtitle">Easily Keep track of vowel usage</h4>
+    <div class="form-group">
+      <h5>Lines</h5>
+      <!-- radio buttons inputs -->
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="lines"
+          id="lineInput"
+          value="1"
+          checked
+        />
+        <label class="form-check-label" for="inlineRadio1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="lines"
+          id="inlineRadio2"
+          value="2"
+        />
+        <label class="form-check-label" for="inlineRadio2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="lines"
+          id="inlineRadio3"
+          value="3"
+        />
+        <label class="form-check-label" for="inlineRadio3">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="lines"
+          id="inlineRadio4"
+          value="4"
+        />
+        <label class="form-check-label" for="inlineRadio3">4</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="lines"
+          id="inlineRadio5"
+          value="5"
+        />
+        <label class="form-check-label" for="inlineRadio3">5</label>
+      </div>
+      <small id="lineInfo" class="form-text text-muted"
+        >Which lines to analyse? ex: enter 1 for every line, enter 2 for every
+        two lines...</small
+      >
+    </div>
+    <!-- end radio button inputs -->
+
+    <!-- Word input -->
+    <div class="form-group">
+      <label for="wordInput">Words</label>
+      <input
+        type="text"
+        class="form-control"
+        id="wordInput"
+        value="1"
+        aria-describedby="lineInfo"
+        placeholder="enter number of words"
+      />
+      <small id="wordInfo" class="form-text text-muted"
+        >Which words to analyse? ex: enter 1 for every word, enter 2 for every
+        two words...</small
+      >
+    </div>
+    <!-- End word input -->
+
+    <!-- Vowel input -->
+    <div class="form-group">
+      <label for="vowelInput">Vowels</label>
+      <input
+        type="text"
+        class="form-control"
+        id="vowelInput"
+        value="1"
+        aria-describedby="vowelInfo"
+        placeholder="enter number number of vowels"
+      />
+      <small id="vowelInfo" class="form-text text-muted"
+        >Enter how many vowels to check each word for.</small
+      >
+    </div>
+    <!-- End vowel input -->
+
+    <!-- Buttons -->
+    <button id="analyze" class="btn btn-primary">
+      Analyze
+    </button>
+    <button id="reset" class="btn btn-warning">
+      Reset
+    </button>
+    <!-- End Buttons -->
+
+    <!-- Results section -->
+    <div id="results"></div>
+
+    <div id="output"></div>
+    <!-- End results section -->
+
+    <!-- Text input section -->
+    <div class="form-group">
+      <label for="textArea">Type or paste text here:</label>
+      <textarea
+        class="form-control"
+        id="textArea"
+        rows="10"
+        wrap="hard"
+        cols="80"
+      ></textarea>
+    </div>
+    <!-- End text input section -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

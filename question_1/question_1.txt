@@ -1,0 +1,18 @@
+Question 1 Our company needs to send out time sensitive and highly personal information to clientele. Information cannot be a savable format at any time. So no emails, faxes, texts, or anything that would leave a paper trail. How would you solve this problem and what technologies would you use? What questions would you ask to further your solution or find a better solution?
+
+The sharing of confidential information in a responsible manner is a critical organizational responsibility. However, striking the right balance between security, convenience, and tracking is challenging.  Nevertheless, the specification that information cannot be in a savable format at any time, and documents are time sensitive are clear requirements that help limit possible solutions.
+My solution would be a secure client portal with the following technologies and features:
+1.	Encrypted email and or text notification of new documents.  No document attachments allowed, just a timely method to notify clients they have documents to review.
+2.	Secure client portal with multi-factor authentication process with comprehensive password policies.
+3.	Client portal must have features:
+a.	Encrypted data likely AES.
+b.	Custom file permissions, read only, deleting, editing etc.
+c.	Audit and version controls, where activity is timestamped in reports, and files can be restored through version history.
+d.	eSignature capabilities.
+e.	Data policy, how long sensitive data is available for the client, backup and disaster recovery, security breaches
+Questions to ask to further refine this proposal:
+1.	What are the cost restrictions or budget requirements?
+2.	A company hosted server, a cloud-based solution, a service provider solution?
+3.	Will clients be required to upload files?
+4.	Will mobile flexibility be required for clients?
+5.	What kind of sensitive data will be shared documents only? Video, audio?

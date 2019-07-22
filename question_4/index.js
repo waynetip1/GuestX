@@ -90,7 +90,7 @@ function activeLines(arr, lines = 1, words, vowels) {
       /* since we have the active line, lets identify active words, and count vowels */
       arr[i] = activeWords(arr[i], words, vowels); // get active and target words
       document.getElementById("output").innerHTML +=
-        "<p class='active'>" + arr[i] + "</p>" + "<br />";
+        "<p class='active'>" + arr[i].join(" ") + "</p>" + "<br />";
     } else {
       document.getElementById("output").innerHTML +=
         "<p class='inactive'>" + arr[i] + "</p>" + "<br />";
@@ -130,7 +130,6 @@ function activeWords(arr, words, vowels) {
       activeArr.push(arr[i]);
     }
   }
-  activeArr.join(" ");
 
   return activeArr;
 }

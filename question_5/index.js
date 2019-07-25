@@ -1,3 +1,4 @@
+// Oil Reserve Data
 var oilReserveData = {
   labels: [
     "Route 66:Alpha",
@@ -38,7 +39,9 @@ var oilReserveData = {
     }
   ]
 };
+// end oil reserve data
 
+// gas reserve data
 var gasReserveData = {
   labels: [
     "Hanamura:Delta",
@@ -79,7 +82,8 @@ var gasReserveData = {
     }
   ]
 };
-
+// end gas reserve data
+// oil production data
 var oilProductionData = {
   labels: ["7/14", "7/15", "7/16", "7/18", "7/19", "7/20"],
   datasets: [
@@ -175,7 +179,8 @@ var oilProductionData = {
     }
   ]
 };
-
+// end oil production data
+// site oil production data
 var oilSiteProductionData = {
   labels: ["7/14", "7/15", "7/16", "7/18", "7/19", "7/20"],
   datasets: [
@@ -218,7 +223,8 @@ var oilSiteProductionData = {
     }
   ]
 };
-
+// end site oil production data
+// gas production data
 var gasProductionData = {
   labels: ["7/14", "7/15", "7/16", "7/18", "7/19", "7/20"],
   datasets: [
@@ -305,7 +311,8 @@ var gasProductionData = {
     }
   ]
 };
-
+// end gas production data
+// gas site production data
 var gasSiteProductionData = {
   labels: ["7/14", "7/15", "7/16", "7/18", "7/19", "7/20"],
   datasets: [
@@ -347,7 +354,7 @@ var gasSiteProductionData = {
     }
   ]
 };
-
+// end gas site production data
 // route66- alpha data
 var route66AlphaReserves = [10000];
 var route66BravoReserves = [12000];
@@ -388,6 +395,7 @@ recordForecast(
   route66Charlie
 );
 
+// function to add data to DOM
 function recordForecast(id1, id2, id3, id4, well, reserve, weeklyRate) {
   document.getElementById(id1).innerHTML = well;
   document.getElementById(id2).innerHTML = reserve;
@@ -395,6 +403,7 @@ function recordForecast(id1, id2, id3, id4, well, reserve, weeklyRate) {
   document.getElementById(id4).innerHTML = forcast(reserve, weeklyRate);
 }
 
+// function to total daily production data
 function productionRate(prodRate) {
   var total = prodRate.reduce(function(sum, element) {
     sum += element;
@@ -402,7 +411,7 @@ function productionRate(prodRate) {
   }, 0);
   return total;
 }
-
+// function to forcast well dry date
 function forcast(reserve, weeklyRate) {
   var weeklyFactor = weeklyRate.reduce(function(sum, number) {
     sum += number;
@@ -413,7 +422,7 @@ function forcast(reserve, weeklyRate) {
   dryDate = wellDryDate(dryDays);
   return dryDate;
 }
-
+// function to convert date format to mm/dd/yyyy
 function wellDryDate(dryDays) {
   var today = new Date();
   var newdate = new Date();
@@ -428,7 +437,7 @@ function wellDryDate(dryDays) {
     " ";
   return dateString;
 }
-
+//  chart.js section start
 let mychart = document.getElementById("myChartOil").getContext("2d");
 
 let oilReserves = new Chart(myChartOil, {
@@ -537,27 +546,6 @@ let gasProduction = new Chart(myChartWellGasProd, {
 });
 
 let gasSiteProduction = new Chart(myChartSiteGasProd, {
-  type: "line",
-  data: gasSiteProductionData,
-  options: {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true
-          },
-          scaleLabel: {
-            display: true,
-            labelString: "Cubic Feet",
-            fontSize: 20
-          }
-        }
-      ]
-    }
-  }
-});
-
-let oilForcasting = new Chart(myChartSiteGasProd, {
   type: "line",
   data: gasSiteProductionData,
   options: {

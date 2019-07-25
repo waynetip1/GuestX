@@ -6,3 +6,6 @@ Question 5 Our oil and gas client would like an application to track the depleti
 b) Using the sample / test data and data model you created in 5, create sample visualizations using bootstrap / javascript / css that will allow our client to quickly see current reserves, daily extraction, and forecasting of when wells will run dry.  
  
 The visualization does not have to be dynamic or functional; a static layout is fine. 
+******************************************************************************************************************************************
+view oil charts at: https://tipton-question-5.netlify.com/
+******************************************************************************************************************************************
